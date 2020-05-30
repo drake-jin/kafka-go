@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"github.com/drake-jin/kafka-go/cmd"
 )
 
 func main() {
-	fmt.Println("Hello world")
+	cmd.Execute()
 }
