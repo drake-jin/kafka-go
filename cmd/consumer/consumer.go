@@ -1,15 +1,16 @@
 package consumer
 
 import (
-	"fmt"
 	"github.com/spf13/cobra"
+
+	saramaConsumer "github.com/drake-jin/kafka-go/internal/sarama/consumer"
 )
 
 func GetStartCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use: "start",
 		Run: func(cmd *cobra.Command, _ []string) {
-			fmt.Println("consumer start")
+			saramaConsumer.Start()
 		},
 	}
 	return cmd

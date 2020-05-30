@@ -1,15 +1,20 @@
 package producer
 
 import (
-	"fmt"
 	"github.com/spf13/cobra"
+
+	saramaProducer "github.com/drake-jin/kafka-go/internal/sarama/producer"
 )
 
+/*
+- 비동기 작성이 가능
+
+*/
 func GetStartCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use: "start",
 		Run: func(cmd *cobra.Command, _ []string) {
-			fmt.Println("producer start")
+			saramaProducer.Start()
 		},
 	}
 	return cmd
